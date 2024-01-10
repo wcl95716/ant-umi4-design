@@ -7,7 +7,7 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "sourceMap": true,
-    "baseUrl": "./",
+    "baseUrl": "src",
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "strict": true,
