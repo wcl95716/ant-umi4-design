@@ -134,3 +134,14 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
 export const request = {
   ...errorConfig,
 };
+
+
+import { Provider } from "react-redux";
+import store from './models/store';
+
+// const rootReducer = (state = {}, action) => state;
+// // const store = createStore(rootReducer);
+
+export function rootContainer(container:any) {
+  return <Provider store={store}>{container}</Provider>;
+}

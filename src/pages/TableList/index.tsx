@@ -15,6 +15,9 @@ import { Button, Drawer, Input, message } from 'antd';
 import React, { useRef, useState } from 'react';
 import type { FormValueType } from './components/UpdateForm';
 import UpdateForm from './components/UpdateForm';
+import { selectStateName } from '../../models/example/index.model';
+import { useAppSelector } from '../../models/store';
+
 
 /**
  * @en-US Add node
@@ -84,6 +87,9 @@ const handleRemove = async (selectedRows: API.RuleListItem[]) => {
 };
 
 const TableList: React.FC = () => {
+
+  const ads = useAppSelector(selectStateName);
+  console.log("selectStateName: ",ads);
   /**
    * @en-US Pop-up window of new window
    * @zh-CN 新建窗口的弹窗

@@ -2,11 +2,14 @@ import { HeartTwoTone, SmileTwoTone } from '@ant-design/icons';
 import { PageContainer } from '@ant-design/pro-components';
 import { useIntl } from '@umijs/max';
 import { Alert, Card, Typography } from 'antd';
+import store from 'models/store';
 import React from 'react';
+import { Provider } from 'react-redux';
 
 const Admin: React.FC = () => {
   const intl = useIntl();
   return (
+    //<Provider store={store}>
     <PageContainer
       content={intl.formatMessage({
         id: 'pages.admin.subPage.title',
@@ -39,6 +42,7 @@ const Admin: React.FC = () => {
         。
       </p>
     </PageContainer>
+    // </Provider>
   );
 };
 
